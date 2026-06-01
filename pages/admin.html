@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Vitoriana</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="../css/admin.css">
+
+    <!-- BOOTSTRAP -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- ICONS -->
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+    <div class="container-admin">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <img src="../midia/imagens/logo.png"
+                    alt="Logo">
+
+                <h2>
+                    Pizzaria Vitoriana
+                </h2>
+
+            </div>
+
+            <!-- MENU -->
+
+            <nav class="menu">
+
+                <a href="admin.html"
+                    class="active">
+
+                    <i class="bi bi-grid-fill"></i>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+                <a href="pedidos.html">
+
+                    <i class="bi bi-bag-fill"></i>
+
+                    <span>
+                        Pedidos
+                    </span>
+
+                </a>
+
+                <a href="pagamentos.html">
+
+                    <i class="bi bi-cash-stack"></i>
+
+                    <span>
+                        Pagamentos
+                    </span>
+
+                </a>
+
+                <a href="relatorios.html">
+
+                    <i class="bi bi-graph-up"></i>
+
+                    <span>
+                        Relatórios
+                    </span>
+
+                </a>
+
+                <a href="configuracoes.html">
+
+                    <i class="bi bi-gear-fill"></i>
+
+                    <span>
+                        Configurações
+                    </span>
+
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- DASHBOARD -->
+
+        <main class="dashboard">
+
+            <!-- TOPO -->
+
+            <div class="top-dashboard">
+
+                <div>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Gerencie os pedidos da pizzaria
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- CARDS -->
+
+            <div class="cards">
+
+                <!-- PEDIDOS -->
+
+                <div class="card-admin">
+
+                    <div class="card-top">
+
+                        <h3>
+                            Pedidos Hoje
+                        </h3>
+
+                        <i class="bi bi-bag-fill"></i>
+
+                    </div>
+
+                    <span id="totalPedidos">
+
+                        0
+
+                    </span>
+
+                </div>
+
+                <!-- FATURAMENTO -->
+
+                <div class="card-admin">
+
+                    <div class="card-top">
+
+                        <h3>
+                            Faturamento
+                        </h3>
+
+                        <i class="bi bi-cash-stack"></i>
+
+                    </div>
+
+                    <span id="faturamentoTotal">
+
+                        R$ 0,00
+
+                    </span>
+
+                </div>
+
+                <!-- PREPARO -->
+
+                <div class="card-admin">
+
+                    <div class="card-top">
+
+                        <h3>
+                            Em Preparo
+                        </h3>
+
+                        <i class="bi bi-fire"></i>
+
+                    </div>
+
+                    <span id="pedidosPreparo">
+
+                        0
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- TABELA -->
+
+            <div class="tabela">
+
+                <div class="titulo-tabela">
+
+                    <h2>
+                        Últimos Pedidos
+                    </h2>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Cliente</th>
+
+                            <th>Status</th>
+
+                            <th>Total</th>
+
+                            <th>Ações</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <!-- JS RENDERIZA -->
+
+                    <tbody id="listaPedidos">
+
+                        <tr>
+
+                            <td colspan="5"
+                                class="sem-pedidos">
+
+                                Não há pedidos ainda
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- JS -->
+
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>
