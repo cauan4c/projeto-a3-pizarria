@@ -45,6 +45,7 @@ async function carregarPedidos(){
         listaPedidos.innerHTML = '';
 
         semPedidos.style.display = 'block';
+
     }
 
 }
@@ -62,6 +63,7 @@ function renderizarPedidos(lista){
         semPedidos.style.display = 'block';
 
         return;
+
     }
 
     semPedidos.style.display = 'none';
@@ -152,6 +154,8 @@ async function alterarStatus(id){
 
         console.log(error);
 
+        alert('Erro ao atualizar status do pedido.');
+
     }
 
 }
@@ -168,6 +172,7 @@ async function excluirPedido(id){
     if(!confirmar){
 
         return;
+
     }
 
     try{
@@ -185,6 +190,8 @@ async function excluirPedido(id){
     catch(error){
 
         console.log(error);
+
+        alert('Erro ao excluir pedido.');
 
     }
 
